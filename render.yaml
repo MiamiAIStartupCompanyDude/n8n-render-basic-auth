@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: n8n-basic-auth-instance
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: yourusername
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: yoursecurepassword
+      - key: N8N_USER_MANAGEMENT_DISABLED
+        value: true
+      - key: DB_SQLITE_VACUUM_ON_STARTUP
+        value: true
+      - key: DB_SQLITE_DATABASE
+        value: /data/database.sqlite
+    disk:
+      name: n8n-data
+      mountPath: /data
+      sizeGB: 1
