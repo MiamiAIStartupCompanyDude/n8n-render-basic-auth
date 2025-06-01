@@ -8,7 +8,7 @@ services:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
       - key: N8N_BASIC_AUTH_USER
-        value: yourusername
+        value: Heritage
       - key: N8N_BASIC_AUTH_PASSWORD
         value: yoursecurepassword
       - key: N8N_USER_MANAGEMENT_DISABLED
@@ -16,7 +16,7 @@ services:
       - key: DB_SQLITE_VACUUM_ON_STARTUP
         value: true
       - key: DB_SQLITE_DATABASE
-        value: /data/database.sqlite
+        value: /data/database-fresh.sqlite
     disk:
       name: n8n-data
       mountPath: /data
